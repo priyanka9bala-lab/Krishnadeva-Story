@@ -1,0 +1,51 @@
+URGENT: This is a final attempt with minimal remaining credits. Follow these instructions exactly as written. Do not add any other features, refactor code, or change anything not listed below.
+
+1. CRITICAL: Add Specific Sound Effects (SFX)
+You will use the JavaScript Audio object to implement this. I am providing direct links to the sound files.
+Action: In your JavaScript logic, create Audio objects for the following sounds. 
+// Example of how to create the audio objects
+const courtSFX = new Audio('https://cdn.pixabay.com/download/audio/2022/10/26/audio_9073100874.mp3');
+const battleSFX = new Audio('https://cdn.pixabay.com/download/audio/2022/09/16/audio_259044b39b.mp3');
+const victorySFX = new Audio('https://cdn.pixabay.com/download/audio/2022/01/18/audio_735a2399cb.mp3');
+
+// Set them to loop where appropriate
+courtSFX.loop = true;
+battleSFX.loop = true;
+
+Implementation Logic:
+* When a scene is displayed, play the corresponding SFX and pause all others.
+* Court Scenes: For any scene taking place in the court (e.g., talking to Timmarusu), play the courtSFX.
+* Battle Scenes: For any scene depicting war, cannons, or fighting, play the battleSFX.
+* Victory Scenes: For the final "MISSION ACCOMPLISHED!" screen, play the victorySFX.
+* Ensure only one SFX plays at a time. When transitioning to a new scene, pause() the previous sound before you .play() the new one.
+
+2. CRITICAL: Fix Mobile UI Overlap & Timing Bug
+This is a two-part fix: CSS for layout and JavaScript for timing.
+A. CSS Fix (Layout):
+* Identify the main container holding both the text area and the choice-box area.
+* In your CSS file, add a @media query for mobile screen sizes (e.g., max-width: 768px).
+* Inside this media query, force the main container to use a column layout to stack the elements vertically. 
+/* Example CSS to add */
+@media (max-width: 768px) {
+  .main-story-container { /* Use the actual class name of your container */
+    display: flex;
+    flex-direction: column;
+  }
+  .text-container { /* Use actual class name */
+    order: 1; /* Ensures text comes first */
+  }
+  .choice-container { /* Use actual class name */
+    order: 2; /* Ensures choices come after */
+  }
+}
+
+B. JavaScript Fix (Timing):
+* The choice boxes must be hidden by default when a new text section loads. Set their visibility to hidden or display to none.
+* Your code likely has a function that animates the text (the typewriter effect).
+* At the completion of that text animation function, and only then, change the CSS of the choice-box container to visibility: visible or display: block.
+* This logic must be tied to the end of the text display event for every single story step. Do not show buttons on a simple timer; it must be event-driven from the text animation completion.
+
+Final Instruction:
+Implement only these two critical fixes. Do not touch any other part of the application. The goal is to resolve the SFX and mobile UI bugs using the explicit methods described above to ensure success with minimal credit usage.
+
+END OF PROMPT

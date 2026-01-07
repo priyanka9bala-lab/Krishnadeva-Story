@@ -1,0 +1,121 @@
+Project Objective:
+Build a vertical, web-based interactive storytelling demo about King Krishnadeva Raya and the Battle of Raichur (1520, Indian history), using the script below. This is a fast prototype: use placeholder images and MP3 audio wherever needed. The most important things are vividness, branching logic, and usability.
+
+Key Requirements:
+1. Visuals & UX
+    * Use stock or AI-generated placeholder illustrations (for Indian kings, palaces, armies, rivers, etc.) for every major scene and character. Choose images that reflect authentic Indian styles, but speed is top priority.
+    * For characters, you may use stock avatars with Indian features or use generic avatars with Indian names underneath.
+    * Use clear, colorful, mobile-friendly layouts. Make sure it looks engaging on both desktop and phone.
+2. Audio Narration & Dialogue
+    * Use royalty-free or AI-generated placeholder MP3s for narration and key dialogues (for now, 2–3 sec audio files, or record your own short test files if possible). Indicate when real content is to be swapped in.
+    * Play audio automatically as text displays. Include simple audio controls (play/pause/mute/replay for each section).
+3. Story Flow & Interactivity
+    * The story scrolls vertically as users progress.
+    * At each choice point, show buttons. The user’s decisions drive story branches as in the script.
+    * After the story, present a multiple-choice quiz. Each answer gives instant color feedback (correct=green, wrong=red and then reveal the right one in green).
+    * Show a final story summary and “Restart Story” button at the end.
+4. Ease of Editing & Reuse
+    * Store all story content, choices, and quiz data in easily-editable JSON or JS objects.
+    * All placeholder image/audio URLs should be easy to swap with final assets later.
+5. Implementation
+    * Use the fastest, simplest tech stack you recommend (React, Svelte, or Vanilla JS fine).
+    * If you need to use external placeholder assets, Unsplash, Pixabay, or similar free resources are fine for demo images. Use any free TTS or stock mp3s for audio.
+    * Keep the code simple and focused: no login, no data storage, just interactive story and quiz.
+
+Script to Implement (structure branches as described):
+
+The King of Vijayanagar: A Battle for the Doab
+[Scene: Grand Vijayanagar city, palace]
+Audio: Narrator
+"It is the year 1520. You are Krishnadeva Raya, the mighty emperor of the glorious Vijayanagar Empire. A battle is approaching!"
+[Button: Start Story]
+
+[Scene: Court gathering]
+[Button: "Click here to ask your Prime Minister, Timmarusu, about it"]
+
+[Scene: Timmarusu in court]
+Audio: "Yes my Lord, it is the fertile land of the Raichur Doab, between rivers Krishna and Tungabhadra."
+
+[Button: "Ask Timmarusu exactly what the problem is"]
+
+Audio: "My King, it has been a point of conflict for centuries! It rightfully belongs to our empire, but is currently held by our enemies, the Bahmani Sultanates; specifically Adil Shah of Bijapur."
+
+[Scene: Courtyard, spy whispers]
+Audio: "Your Majesty, I bring grave news. The merchant has betrayed you. He has taken your gold and has offered his services to your sworn enemy, Adil Shah of Bijapur!"
+
+[Choices:]
+A. Act with wisdom: Send a firm demand to Adil Shah to return the traitor and gold.
+B. Launch a surprise attack on Raichur!
+
+If A:
+[Adil Shah rejects demand.]
+[Button: "Hear Prime Minister’s thoughts"]
+Audio: "My King, let us plan, gather our full strength, and show the Sultanates the true might of Vijayanagar."
+[Choices:]
+A-1. Prepare for full-scale war.
+A-2. Launch immediate attack.
+
+If A-1:
+[War council, or army marching]
+Audio: "You heed Timmarusu's counsel. For months, the empire prepares for war.
+Finally, the battle begins with a deafening roar from your war instruments, a sound so loud it is said that birds fell from the trees. Your initial attack pushes the enemy back. But then, Adil Shah unleashes his cannons."
+
+[Battle scene, river crossing]
+Audio: "This is the moment of crisis. Your empire's fate rests on your next command. What will you do?"
+[Choices:]
+D. Lead the charge!
+E. Order a tactical retreat, find another way across and avoid the cannons.
+
+If E:
+[Triumphant crossing and victory]
+Audio: "You have managed to cross the river and won a stunning victory on the battlefield! The Raichur Doab is now under your control! You also captured the forts of Bidar, Gulbarga, and Bijapur - MISSION ACCOMPLISHED!"
+
+[Button: "See the impact of this battle"]
+[Celebration scene, city rejoicing]
+Audio: "The 1520 Battle of Raichur and annexation of the Raichur Doab was one of the greatest achievements of King Krishnadeva Raya. Under his reign, Vijayanagar emerged as one of the strongest kingdoms of south India."
+[Button: "Proceed to quiz"]
+
+Quiz (multiple choice—show instant color feedback, one question at a time):
+* When did it happen?
+    * A. 1520 (correct)
+    * B. 1570
+    * C. 1700 
+* What region was captured?
+    * A. Raipur Doab
+    * B. Raichur Doab (correct)
+    * C. Ranchi Doab 
+* Where was the Doab located?
+    * A. Between rivers Krishna and Ganga
+    * B. Between rivers Kaveri and Tungabhadra
+    * C. Between rivers Krishna and Tungabhadra (correct) 
+* Which two kingdoms fought the battle?
+    * A. Bahamani and Vijayanagar (correct)
+    * B. Pandyas and Cheras
+    * C. Cholas and Vijayanagar 
+* Which other forts were captured?
+    * A. Gulbarga, Bidar, and Gwalior
+    * B. Bidar, Gulbarga, and Bijapur (correct)
+    * C. Bijapur, Gwalior, and Golconda 
+* What is the name of your Prime Minister?
+    * A. Timmarusu (correct)
+    * B. Tiramisu
+    * C. Timmar 
+[After quiz: Show summary — "The 1520 Battle of Raichur and annexation of the Raichur Doab was one of the greatest military achievements of King Krishnadeva Raya..." and button to Restart Story.]
+
+If user chooses B (immediate attack) OR A-2 (immediate attack):
+* Narrator: "You arrive at the Krishna River to find that Adil Shah, though surprised by your speed, has managed to fortify his position. His cannons are aimed at your army. The battle is fierce and bloody, and your soldiers fight with courage."
+* Narrator: "You win a stunning victory on the battlefield! The Raichur Doab is now under your control!"
+* Narrator: "You also captured the forts of Bidar, Gulbarga, and Bijapur – MISSION ACCOMPLISHED!"
+* [Button: Click here to know the impact of this battle → go to 'impact/quiz/summary' section.] 
+If user chooses D (lead the charge!):
+* Narrator: "You lead a massive counter-attack and won a stunning victory on the battlefield! The Raichur Doab is now under your control!"
+* Narrator: "You also captured the forts of Bidar, Gulbarga, and Bijapur – MISSION ACCOMPLISHED!"
+* [Button: Click here to know the impact of this battle → go to 'impact/quiz/summary' section.]
+
+NOTES TO DEVELOPER:
+* Use placeholder image and mp3 filenames in code and make it easy to swap for final art/audio.
+* Focus on visual clarity, branching logic, and working interactive demo.
+* Do NOT include login or database—single anonymous user flow only.
+* Make navigation and replay options obvious.
+
+END OF PROMPT

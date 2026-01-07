@@ -1,0 +1,48 @@
+I am building a branching web story demo about Krishnadeva Raya and the Battle of Raichur. My usage credits are extremely limited, so focus on only the essentials for interactivity, polish, and engagement. Please address the following exact upgrades:
+
+1. Visual Layout: Side-by-Side, No Overlap
+* Story scenes must use a side-by-side layout:
+    * Left or right: full, unobstructed scene image (should NEVER be covered by text; image fills half or just over half the viewport, responsively).
+    * Other side: story text in a clean box/panel (not over image), visually aligned for easy, readable flow.
+* On mobile, stack: image on top, text panel below.
+
+2. Text-to-Speech (TTS) Quality: Serious & Culturally Accurate
+* Use the browser’s SpeechSynthesis API, BUT:
+    * Select the most sombre/serious/“narrator” voice available (not chipper/child-like).
+    * If possible, try different TTS voices to find one with best pronunciation for Indian names ("Krishnadeva Raya", "Timmarusu", etc.); prefer Neutral/British/Indian-accent voices over US robotic ones.
+    * Use pronunciation hacks (phonetic spelling/hyphenation if needed in the TTS text) for better accuracy.
+
+3. Text Animation (Typewriter Effect)
+* Story text in each block should appear with a smooth typewriter animation, line by line or word by word, in sync with voice narration.
+* While text is revealing, previous/next/choice buttons should be HIDDEN (see #5).
+
+4. Scene Visuals & Animation
+* Scene images MUST be animated (if possible with given resources):
+    * Characters within each scene (e.g. soldiers in battles, people in the court) should be depicted with some movement—not static.
+    * For the battle scene: Soldiers, elephants, and action should actually move (swing swords, march, etc.).
+    * For court scenes: Advisors talking, the king gesturing, characters blinking, nodding, or interacting.
+    * Simple looping 2D/3D or “puppet”/parallax/animated GIF/WebM/Canvas/SVG animation methods are all acceptable, whichever is most achievable for a rapid prototype.
+    * If full animation is not feasible for every scene due to rapid prototyping constraints, use animated overlays, sprite sheets, or stock animated assets where possible and call out (in comments) where final/upgraded animation could be inserted.
+* Animated images must be displayed side-by-side with story text, with no text overlapping images (on desktop).
+    * On mobile, separate: animation on top and text below.
+
+5. Choices Timing and Interactivity
+* Choice buttons must ONLY appear after all text has animated in and the narration is complete.
+    * (e.g., a “Continue” or “Next” button appears after narration, then choices are shown; or choices simply appear after narration+text finish for that step)
+* No static waiting: Choices and interaction should follow a clear “watch/read/listen → then choose” rhythm for maximum engagement.
+
+6. General
+* Retain all previous logic: full-screen or responsive side-by-side, no overlap, vivid images (use placeholders), clear branching, quiz-then-impact sequence, TTS for all text, etc.
+* Use simple SFX if feasible (e.g., soft chime for new choice reveal).
+* Must remain mobile-friendly, visually clean, and quick to use.
+* Only focus on features above—do not add non-essentials due to credit limits.
+
+Summary:
+* Story and images displayed side-by-side (never overlap).
+* Text has typewriter animation in sync with the best available (serious/Indian) TTS narration.
+* Scene images animate in.
+* Choices/buttons only appear after narration/text finish.
+* Prioritize accurate pronunciation and a serious narrator vibe.
+* Keep everything simple, interactive, and responsive as a demo.
+
+END OF PROMPT

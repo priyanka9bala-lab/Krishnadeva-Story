@@ -1,0 +1,63 @@
+Please make only the absolute priority changes listed below, in the most direct way possible, to minimize additional credit usage.
+Do not refactor or adjust anything except exactly what’s asked.
+Skip non-essential/secondary changes unless all priorities are completed within minimal compute.
+
+1. Critical: Narrator Voice Must Be Deep and Impactful
+* Change the text-to-speech (TTS) voice for all narration/dialogue to a strong, bold, deep, hoarse, “documentary narrator” style voice.
+* Use the browser’s SpeechSynthesis API voice with the deepest/most serious timbre (not a child or female or chipper voice—must be deep and commanding).
+* If browser/OS TTS options are limited, programmatically select all available TTS voices and choose the deepest/most 'narrator' voice.
+* If this cannot be guaranteed programmatically, display a dropdown or auto-select the “best match,” and provide instructions for students to switch to a recommended desktop browser for the best voice.
+* This is absolute priority 1.
+
+2. Critical: Highlight Key Words for Quiz Recall
+Make these very specific text changes—bigger font, bold, and dark contrasting color as described (e.g. dark brown or that fits current theme):
+* Landing slide:
+    * "1520" and "Krishnadeva Raya" → bold, much larger font, different dark contrasting color.
+* Prime Minister’s line:
+    * "Raichur Doab", "Krishna", and "Tungabhadra" → highlighted.
+    * The name "Prime Minister" or "Timmarusu" should also stand out (bold/color/bigger, etc.).
+* Conflict/Enemies line:
+    * "Bahmani Sultanates" and "Adil Shah of Bijapur" → highlighted/bold/dark contrasting color.
+* Victory line:
+    * "Raichur Doab", "Bidar", "Gulbarga", "Bijapur" → highlighted as above.
+Use span/style classes or whatever is current standard in codebase, for fast minimal intervention.
+
+3. Critical: Quiz Option Rewrites
+For each quiz question, update the options as follows (delete all other options):
+* When did the Battle of Raichur happen?
+    * 1520
+    * 2015
+* What region was captured?
+    * Raichur Doab
+    * Raipur Doab
+* Where was the Doab located?
+    * Between rivers Krishna and Tungabhadra
+    * Between rivers Kaveri and Ganga
+* Which two kingdoms fought the battle?
+    * Bahamani and Vijayanagar
+    * Pandyas and Cholas
+* Which other forts were captured?
+    * Bidar, Gulbarga and Bijapur
+    * Gwalior, Golconda and Agra
+* What is the name of your Prime Minister?
+    * Timmarusu
+    * Tiramisu
+
+4. Critical: Overflowing Choice Text
+* Review all choice boxes (choices/buttons throughout story and quiz).
+* For any that overflow their background/box, increase box size, adjust padding, or set word-wrap so all text is visible cleanly inside the button/box on all screen sizes.
+* No text should spill outside or get visually truncated.
+
+5. Secondary/Nice-to-have: Animated Visuals
+* ONLY IF there is credit/computation room after all critical items:
+    * Replace simple fade/static image transitions with animated/moving visuals (e.g. motion in battle, characters moving or acting in court), preferably with existing code/asset libraries, GIFs, Lotties, or light-weight sprite animations.
+* Otherwise, skip or just add TODO comments where animated assets would go in the future.
+
+6. Low Priority
+* In the line:"Your Majesty, I bring grave news. The merchant has betrayed you. He has taken your gold and has offered his services to your sworn enemy, Adil Shah of Bijapur!" 
+* Remove the text "of Bijapur!" after "Adil Shah".
+* Only do this if it does not impact credits for the above changes.
+
+Instructions:
+1. Do items 1–4 only (absolute priorities).
+2. ONLY proceed to items 5 and 6 if the above are fully done/committed and there is remaining compute/credit.

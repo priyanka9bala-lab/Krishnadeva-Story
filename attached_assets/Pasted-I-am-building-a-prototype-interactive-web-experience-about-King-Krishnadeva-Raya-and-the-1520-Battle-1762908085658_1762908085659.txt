@@ -1,0 +1,39 @@
+I am building a prototype interactive web experience about King Krishnadeva Raya and the 1520 Battle of Raichur. My credits are very limited, so please be efficient, practical, and focused—optimize only the essentials needed for a smooth and engaging user demo.
+Here are the exact changes, fixes, and enhancements needed:
+
+1. Sequence & Narrative Correction
+Replace this block:
+* You sit upon your throne, surrounded by your trusted advisors in the grand court of Vijayanagar.
+* [Button: Click here to ask your Prime Minister, Timmarusu, about it]
+With this flow:
+* You sit upon your throne, surrounded by your trusted advisors in the grand court of Vijayanagar.
+* You have been hearing about some trouble with a piece of land that rightfully belongs to your empire.
+* [Button: Click here to ask your Prime Minister, Timmarusu, about it] (The second sentence must appear before the button is available. User must see/read both first.)
+
+2. Quiz Before Battle Impact
+* The impact of the battle (“The 1520 Battle of Raichur and annexation...”) must be revealed only after the user completes the quiz. Change sequence so the user is prompted:
+    * [Narrator/Instruction]: “Test your knowledge to find out what happened next!”
+    * [Show quiz]
+    * Only after all quiz answers are done reveal:
+        * [Narrator (audio and text)]: the impact/conclusion text, and show [Restart Story] button.
+
+3. Visual Layout / UI
+* Images must be full screen (background or cover the viewport for each scene); do not limit to bottom/corner.
+* Text should be overlaid at the CENTER of the image, or optionally on the SIDE in a visually balanced way—but NOT anchored only to the bottom.
+* Make sure text remains clearly readable over the images (use a semi-transparent background box for text if needed).
+
+4. Audio, Narration, and Engagement
+* Every scene/narration/dialogue block should have text-to-speech (TTS) narration played automatically (if students do not hear custom narration). Use browser’s built-in TTS (SpeechSynthesis) or a fast, free TTS service for all story and quiz narration.
+* If possible, add simple button SFX (e.g., a soft chime on choices/advancement).
+* User should have the option to mute/replay narration at each block.
+* Do NOT skip or delay this: Students must hear the story, not just read it—this is important for engagement.
+
+5. General/Fundamentals
+* Retain all branch logic, quiz structure, and correct choices. (as in the last prompt)
+* Continue to use placeholder images and TTS narration for maximum credits efficiency.
+* Optimize for mobile and desktop. Large, clear, inviting interface.
+
+Summary:
+Fix text sequence at the start, move impact to after the quiz, make all images full screen with central or side overlaid text, ensure TTS narration for all scenes/dialogue/quiz, use SFX where feasible, and keep app highly usable and visually engaging. Do not spend time on nonessential features.
+
+END OF PROMPT

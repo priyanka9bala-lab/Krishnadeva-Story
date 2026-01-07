@@ -1,0 +1,34 @@
+URGENT & FINAL FIX: The project is almost perfect. One last change is needed for usability. Please implement only this one fix with minimal credit usage.
+The Problem:
+When the story text finishes, the choice boxes appear correctly, but they are off-screen on mobile and some desktop views, forcing the user to scroll manually to see them. This is confusing.
+The Solution (Implement Exactly as Described):
+You will use JavaScript to automatically scroll the choice boxes into view the moment they appear.
+1. Identify the Target Element: Find the div or container that holds the choice buttons. Let's call it choicesContainer.
+2. Locate the Trigger Point: In your JavaScript, find the exact line of code where the choicesContainer is made visible (e.g., where its display is set to block or flex, or visibility is set to visible).
+3. Add This Line of Code: Immediately after the code that makes the choice boxes visible, add the following JavaScript command:
+choicesContainer.scrollIntoView({ behavior: 'smooth', block: 'end' });
+(Note: Use the actual variable name for your choice box container)
+
+Code Example for Clarity:
+// This is an EXAMPLE of what your code might look like.
+
+function showChoices() {
+  const choicesContainer = document.getElementById('choice-box-container'); // Or your actual selector
+
+  // --- YOUR EXISTING CODE THAT MAKES THE BOXES VISIBLE ---
+  choicesContainer.style.display = 'flex';
+  // --- END OF EXISTING CODE ---
+
+
+  // *** ADD THIS NEW LINE IMMEDIATELY AFTER ***
+  choicesContainer.scrollIntoView({ behavior: 'smooth', block: 'end' });
+}
+
+Why This Works:
+* scrollIntoView() is a standard browser command that scrolls the page to make an element visible.
+* { behavior: 'smooth' } makes the scroll look clean and professional, not jarring.
+* { block: 'end' } helps align the bottom of the container with the bottom of the viewport, which is usually what's desired in this scenario.
+Final Instruction:
+Do nothing else. Just add this single line of auto-scrolling code in the correct place to fix the user flow. This will provide the seamless experience needed.
+
+END OF PROMPT

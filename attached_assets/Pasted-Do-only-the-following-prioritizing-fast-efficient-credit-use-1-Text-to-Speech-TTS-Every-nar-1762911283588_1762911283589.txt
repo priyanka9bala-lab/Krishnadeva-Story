@@ -1,0 +1,42 @@
+Do only the following, prioritizing fast, efficient credit use:
+
+1. Text-to-Speech (TTS)
+* Every narration/dialogue line must trigger Text-to-Speech automatically as that text appears on screen.
+* Use the browser’s native SpeechSynthesis API for all TTS.
+    * Use most “serious” or “narrator” voice available (preferably Indian English if present; otherwise, choose the most neutral/non-childlike English option).
+    * If unsure, let user pick from available voices at the start (if trivial/optional), otherwise default to the best one.
+* Text and voice must always be in sync (i.e., TTS reads out the current visible text only), and every narration/dialogue/choice step must have TTS before continuing.
+
+2. Fix/Insert These Specific Script Steps
+After Timmarusu says:
+“My King, it has been a point of conflict for centuries! It rightfully belongs to our empire, but is currently held by our enemies, the Bahmani Sultanates; specifically Adil Shah of Bijapur.”
+INSERT THIS (with TTS):
+Narrator: "You know the threat of Adil Shah and decide to send a merchant with a large sum of gold to purchase the finest war horses for your army. But, soon, one of your spies brings you disturbing news."
+THEN the choice box should say:
+"Find out what it is!"
+
+After the spy says:
+"Your Majesty, I bring grave news. The merchant has betrayed you. He has taken your gold and has offered his services to your sworn enemy, Adil Shah of Bijapur!"
+INSERT THIS (with TTS):
+"Your blood boils. This is treachery! What will you do?"
+THEN offer the two choice buttons.
+
+After the Prime Minister says:
+"My King, let us plan, gather our full strength, and show the Sultanates the true might of Vijayanagar."
+INSERT THIS (with TTS):
+"What do you do?"
+THEN offer:
+* Listen to Timmarusu (prepare for full-scale war)
+* Launch immediate attack
+
+3. Remove This (Edit Narration):
+"You heed Timmarusu's counsel. For months, the empire prepares for war. Finally, the battle begins with a deafening roar from your war instruments, a sound so loud it is said that birds fell from the trees. Your initial attack pushes the enemy back. But then, Adil Shah unleashes his cannons."
+SHOULD BECOME:
+"You heed Timmarusu's counsel. For months, the empire prepares for war. Finally, the battle begins. Your initial attack pushes the enemy back. But then, Adil Shah unleashes his cannons."
+
+4. Credit/Publishing Consideration
+* Only execute what is above and nothing extra.
+* Keep current visual/interactivity logic as is.
+* No added code beyond what is needed to implement these, to ensure you do not exceed credits and still can publish your site.
+
+END OF PROMPT
